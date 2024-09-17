@@ -6,7 +6,7 @@ function App() {
     return (
             <div>
                 <h1>Menu</h1>
-                {PRODUCTS_DATA.map(p => <MenuProduct product = {p}/>)}
+                {PRODUCTS_DATA.map(p => <MenuProduct key={p.name} product = {p}/>)}
             </div>
     )
 }
