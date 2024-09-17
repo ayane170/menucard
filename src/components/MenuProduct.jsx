@@ -1,4 +1,4 @@
 export function MenuProduct(props) {
-    const {productName,price} = props;
-    return <div>{productName} {price} €</div>
+    const {product} = props;
+    return <div>{product.name} {product.price} €</div>
 }
