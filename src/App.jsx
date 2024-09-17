@@ -1,18 +1,15 @@
-
 import './App.css'
+import {MenuProduct} from "./components/MenuProduct.jsx";
 
 function App() {
-
     return (
-        <div id="root">
             <div>
                 <h1>Menu</h1>
-                <div>cola</div>
-                <div>water</div>
-                <div>bier</div>
-                <div>wijn</div>
+                <MenuProduct productName="cola"/>
+                <MenuProduct productName="water"/>
+                <MenuProduct productName="bier"/>
+                <MenuProduct productName="wijn"/>
             </div>
-        </div>
     )
 }
 
