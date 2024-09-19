@@ -1,3 +1,4 @@
+import "normalize.css"
 import './App.css'
 import {MenuProduct} from "./components/MenuProduct.jsx";
 import {PRODUCTS_DATA} from "./data/data.js";
