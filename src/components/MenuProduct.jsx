@@ -5,9 +5,9 @@ export function MenuProduct(props) {
         <div style={{margin: "2vw", fontSize: "larger", display: "flex"}}>
             <div style={{flex: 1}}>
             {product.name}
-                <span style={{color:"blue"}}>
+                <div style={{color:"blue" ,     display:"inline"}}>
             {product.size ? ` (${product.size} cl)` : ''}
-                </span>
+                </div>
             </div>
             <div style={{flex: 1}}>
                 {product.price} &euro;
