@@ -8,7 +8,7 @@ import {PicturesPage} from "./pages/PicturesPage.jsx";
 function App() {
     return (
             <>
-                <h1>Menu</h1>
+
                 {/*{PRODUCTS_DATA.map(p => <MenuProduct key={p.name} product = {p}/>)}*/}
                 <MenuCardPage products = {PRODUCTS_DATA}/>
                 <PicturesPage/>

@@ -3,7 +3,7 @@ import React from 'react';
 export function PicturesPage() {
     return (
         <div>
-            <h1>Pictur</h1>
+            <h1>Pictures</h1>
         </div>
     );
 }
