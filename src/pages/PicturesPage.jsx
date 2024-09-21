@@ -29,27 +29,32 @@ const PICTURES_DATA = [
         id: 3,
         credit:
             "https://unsplash.com/@yan_slg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText",
-        author: "Boudhayan Bardhan",
+        author: "Aziz Acharki",
         name: "aziz-acharki-Z1YBUimpQ_0-unsplash.jpg"
     },
     {
         id: 4,
         credit:
             "https://unsplash.com/@mkaminski?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText",
-        author: "Madison Kaminski",
+        author: "Aziz Acharki",
         name: "aziz-acharki-HJe7UwySuWY-unsplash.jpg"
     },
 ];
+
 export function PicturesPage() {
     return (
         <div>
             <h1>Pictures</h1>
             {PICTURES_DATA.map((picture) => (
                 <div key={picture.id}>
-                    <img src={`${picture.name}`} alt={picture.author} width="100%" style={{margin:"2vw auto 0 auto"}}/>
-                    <p>Photo par <a href={picture.credit}>{picture.author}</a></p>
+                    <img src={`images/${picture.name}`}
+                         alt={picture.author}
+                         width="100%"
+                         style={{margin: "2vw auto 0 auto"}}/>
+                    <p>By <a href={picture.credit}>{picture.author}</a></p>
                 </div>
             ))}
         </div>
     );
 }
+

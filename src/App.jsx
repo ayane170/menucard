@@ -22,9 +22,6 @@ function App() {
                 <PicturesPage/>
             </TabPanel>
         </Tabs>
-    {/*{PRODUCTS_DATA.map(p => <MenuProduct key={p.name} product = {p}/>)}*/
-    }
-
 </>
 
 )
