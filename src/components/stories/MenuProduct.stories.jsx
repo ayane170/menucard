@@ -23,3 +23,18 @@ export default meta;
 export const Default = {
   args: {}
 };
+export const ProductWithoutSize = {
+  args: {
+    product: {...testProduct, size: undefined}
+  },
+}
+export const ProductWithoutNote = {
+  args: {
+    product: {...testProduct, note: undefined}
+  },
+}
+export const ProductWithoutName = {
+  args: {
+    product: {...testProduct, name: undefined}
+  },
+}
