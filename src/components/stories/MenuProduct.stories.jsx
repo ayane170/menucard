@@ -6,7 +6,9 @@ const testProduct = {
   size: 30,
   note: "lekker fris"
 };
-
+/**MenuProduct renders a product object.
+ * A product contains a name, price, and(optionally) a size and a note.
+ */
 const meta = {
   component: MenuProduct,
   tags: ['autodocs'],
