@@ -43,3 +43,9 @@ export const ProductWithoutPrice = {
     product: {...testProduct, price: undefined}
   },
 }
+export const isFavorite = {
+  args: {
+    product: testProduct,
+    isFavorite: true,
+  },
+}
