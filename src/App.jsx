@@ -1,5 +1,6 @@
 import "normalize.css"
 import './App.css'
+import 'react-tabs/style/react-tabs.css';
 // import {MenuProduct} from "./components/MenuProduct.jsx";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {MenuCardPage} from "./pages/MenuCardPage.jsx";
