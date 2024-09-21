@@ -1,6 +1,6 @@
 export function MenuProduct(props) {
     const {product} = props;
-    if (!product?.name  )return ;
+    if (!product?.name || product.price === undefined  )return ;// de cet methode si le produit n'a pas de prix il ne va pas apparaitre
     return (
         <div style={{margin: "2vw", fontSize: "larger", display: "flex"}}>
             <div style={{flex: 1}}>

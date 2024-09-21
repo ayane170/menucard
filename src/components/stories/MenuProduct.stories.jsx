@@ -38,3 +38,8 @@ export const ProductWithoutName = {
     product: {...testProduct, name: undefined}
   },
 }
+export const ProductWithoutPrice = {
+  args: {
+    product: {...testProduct, price: undefined}
+  },
+}

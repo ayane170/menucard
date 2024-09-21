@@ -5,4 +5,5 @@ export const PRODUCTS_DATA = [
     {name: "bier groot", price: 1, size: 33},
     {name: "wijn", price: 2, note:"rood, wit of rosé"},
     {name: "cava", price: 3},
+    {name: "fanta", size: 50},
 ]
