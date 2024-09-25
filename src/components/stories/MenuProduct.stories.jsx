@@ -46,6 +46,6 @@ export const ProductWithoutPrice = {
 export const isFavorite = {
   args: {
     product: testProduct,
-    isFavorite: true,
+    isFavorite: true, // hadi daroria
   },
 }
