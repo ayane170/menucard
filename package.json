@@ -1,4 +1,5 @@
 {
+  "homepage": ".",
   "name": "dynamic_oefeningen",
   "private": true,
   "version": "0.0.0",
@@ -9,10 +10,14 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+
   },
   "dependencies": {
     "bootstrap": "^5.3.3",
+    "gh-pages": "^6.1.1",
     "normalize.css": "^8.0.1",
     "react": "^18.3.1",
     "react-bootstrap": "^2.10.4",
