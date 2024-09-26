@@ -20,7 +20,6 @@ export function Numbers(props) {
                         </Col>
                     ))}
                 </Row>
-
             </Container>
         </div>
     );
