@@ -1,16 +1,16 @@
 export function MenuProduct(props) {
-    const {product , isFavorite} = props;
-    if (!product?.name || product.price === undefined  )return ;// de cet methode si le produit n'a pas de prix il ne va pas apparaitre
+    const {product, isFavorite} = props;
+    if (!product?.name || product.price === undefined) return;// de cet methode si le produit n'a pas de prix il ne va pas apparaitre
 
     const productStyle = {
-        background:isFavorite? "Aqua":"",
+        background: isFavorite ? "Aqua" : "",
     };
     return (
         <div style={{margin: "2vw", fontSize: "larger", display: "flex"}}>
             <div style={{flex: 1,}}>
              <span style={productStyle}>
                     {product.name}
-                <div style={{color: "blue", display: "inline"}}>
+                 <div style={{color: "blue", display: "inline"}}>
                     {product.size ? ` (${product.size} cl)` : ''}
                 </div>
                  </span>
@@ -24,5 +24,5 @@ export function MenuProduct(props) {
                 </span>
             </div>
         </div>
-);
+    );
 }

@@ -4,7 +4,7 @@ import {MenuProduct} from "../components/MenuProduct.jsx";
 export function MenuCardPage(props){
     const {products} = props;
     return (
-        <div>
+        <div >
             <h1>Menu</h1>
             {products.map(p => <MenuProduct key={p.name} product={p}/>)}
         </div>);
