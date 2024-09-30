@@ -6,10 +6,15 @@ function Car({ car }) {
     return (
         <Card className="m-2 p-2 shadow-sm">
             <Card.Body>
-                <p><strong>Naam:</strong> {car.name}</p>    {/* Afficher la propriété 'name' */}
-                <p><strong>Merk:</strong> {car.brand}</p>   {/* Afficher la propriété 'brand' */}
-                <p><strong>Type:</strong> {car.type}</p>    {/* Afficher la propriété 'type' */}
-                <p><strong>Kleur:</strong> {car.color}</p>  {/* Afficher la propriété 'color' */}
+                {/* Afficher 'naam' uniquement s'il existe */}
+                {car.name && <p><strong>Type:</strong> {car.name}</p>}
+                {/* Afficher 'Brand' uniquement s'il existe */}
+                {car.brand && <p><strong>Type:</strong> {car.brand}</p>}
+                {/* Afficher 'Type' uniquement s'il existe */}
+                {car.type && <p><strong>Type:</strong> {car.type}</p>}
+                {/* Afficher 'Kleur' uniquement s'il existe */}
+                {car.color && <p><strong>Kleur:</strong> {car.color}</p>}
+
             </Card.Body>
         </Card>
     );
