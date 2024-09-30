@@ -6,8 +6,7 @@ function Car({ car }) {
     return (
         <Card className="m-2 p-2 shadow-sm">
             <Card.Body>
-                {/* Afficher 'naam' uniquement s'il existe */}
-                {car.name && <p><strong>Type:</strong> {car.name}</p>}
+                {car.name && <p><strong>{car.name}</strong> </p>}
                 {/* Afficher 'Brand' uniquement s'il existe */}
                 {car.brand && <p><strong>Type:</strong> {car.brand}</p>}
                 {/* Afficher 'Type' uniquement s'il existe */}
