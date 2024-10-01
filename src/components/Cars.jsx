@@ -41,6 +41,7 @@ function Car(props) {
                 <h5>{car.name}</h5>
                 {car.brand && <div>merk: {car.brand}</div>}
                 {car.type && <div>type: {car.type}</div>}
+                {car.note && <div>opm: {car.note}</div>}
                 <CarColor color={car.color}/>
             </Card>
         </Col>
