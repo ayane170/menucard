@@ -1,6 +1,7 @@
 // import PropTypes from "prop-types";
 import {Card, Col, Container, Row} from "react-bootstrap";
 import {Section} from "./Section.jsx";
+import {SectionCard} from "./SectionCard.jsx";
 
 const COLORS_CAR_CSS = [
     {nameInCar: "blauw", backGroundColorInCss: "blue", colorInCss: "white"},
@@ -35,17 +36,13 @@ function CarColor(props) {
 function Car(props) {
     const {car} = props;
     return (
-        <Col key={car.id}
-             xs={12} sm={6} md={4} lg={3} xl={2} xxl={1}
-             className={"d-flex align-items-stretch text-center "}>
-            <Card className="m-2 p-2 shadow-sm">
-                <h5>{car.name}</h5>
-                {car.brand && <div>merk: {car.brand}</div>}
-                {car.type && <div>type: {car.type}</div>}
-                {car.note && <div>opm: {car.note}</div>}
-                <CarColor color={car.color}/>
-            </Card>
-        </Col>
+        <SectionCard key={car.id}>
+            <h5>{car.name}</h5>
+            {car.brand && <div>merk: {car.brand}</div>}
+            {car.type && <div>type: {car.type}</div>}
+            {car.note && <div>opm: {car.note}</div>}
+            <CarColor color={car.color}/>
+        </SectionCard>
     );
 }
 
