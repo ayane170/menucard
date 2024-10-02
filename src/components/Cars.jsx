@@ -1,5 +1,3 @@
-// import PropTypes from "prop-types";
-import {Card, Col, Container, Row} from "react-bootstrap";
 import {Section} from "./Section.jsx";
 import {SectionCard} from "./SectionCard.jsx";
 
@@ -55,7 +53,3 @@ export function Cars(props) {
     );
 }
 
-Cars.propTypes = {
-    cars: PropTypes.array,
-    title: PropTypes.string
-};
