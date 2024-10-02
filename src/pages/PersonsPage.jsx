@@ -1,5 +1,6 @@
 import {Persons} from "../components/Persons.jsx";
 import {Numbers} from "../components/Numbers.jsx";
+import {Cities} from "../components/stories/Cities.jsx";
 
 
 function citiesFromPersonData(persons){
@@ -23,6 +24,7 @@ export function PersonsPage(props){
             <Numbers numbers={persons.map(p => p.age)} title="alle personen"/>
             <Numbers numbers={[...new Set(persons.map(p => p.age))].sort((n1, n2) => n2 - n1)}
                      title="leeftijden gesorteerd en uniek"/>
+            <Cities cities={citiesFromPersonData(persons)} title="steden van alle personen"/>
 
         </div>
     );
