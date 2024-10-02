@@ -9,7 +9,7 @@ import {PicturesPage} from "./pages/PicturesPage.jsx";
 import {Tab, TabList, TabPanel, Tabs} from "react-tabs";
 import {CarsPage} from "./pages/CarsPage.jsx";
 import {EventsPage} from "./pages/EventsPage.jsx";
-// import {PersonsPage} from "./pages/PersonsPage.jsx";
+import {PersonsPage} from "./pages/PersonsPage.jsx"
 
 function App() {
     return (
@@ -20,7 +20,7 @@ function App() {
                     <Tab>pics</Tab>
                     <Tab>numbers</Tab>
                     <Tab>cars</Tab>
-                    {/*<Tab>Persons</Tab>*/}
+                    <Tab>Persons</Tab>
                     <Tab>events</Tab>
 
                 </TabList>
@@ -36,9 +36,9 @@ function App() {
                 <TabPanel>
                     <CarsPage cars={CAR_DATA}/>
                 </TabPanel>
-                {/*<TabPanel>*/}
-                {/*    <PersonsPage persons={PERSON_DATA}/>*/}
-                {/*</TabPanel>*/}
+                <TabPanel>
+                   <PersonsPage  persons={PERSON_DATA}/>
+                </TabPanel>
                 <TabPanel>
                     <EventsPage />
                 </TabPanel>
