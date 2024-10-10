@@ -9,14 +9,15 @@ export function StatePage(){
     return(
         <Section title="state">
             <div>de waarde van demoValue is {demoValue}</div>
+            <div>de waarde van demoValue is {demoValue}</div>
             <div>
-            <Button variant="primary"
-                    size="sm"
-                    width="20px"
-                    className="m-2 mt-1"
-                    onClick={() => setDemoValue(0)}>
-                set 0
-            </Button>
+                <Button variant="primary"
+                        size="sm"
+                        width="20px"
+                        className="m-2 mt-1"
+                        onClick={() => setDemoValue(0)}>
+                    set 0
+                </Button>
                 <Button variant="primary"
                         size="sm"
                         width="20px"
@@ -33,5 +34,5 @@ export function StatePage(){
                 </Button>
             </div>
         </Section>
-)
+    )
 }
