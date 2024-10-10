@@ -14,7 +14,7 @@ export function Cities(props){
     const {cities,title}= props;
     return(
         <Section title={title}>
-            {cities.map(c => <City city={c} key={c.id}/>)}
+            {cities.map((c,index) => <City city={c} key={c.name + index}/>)}
         </Section>
 
 );
