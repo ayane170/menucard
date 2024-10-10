@@ -10,6 +10,7 @@ import {Tab, TabList, TabPanel, Tabs} from "react-tabs";
 import {CarsPage} from "./pages/CarsPage.jsx";
 import {EventsPage} from "./pages/EventsPage.jsx";
 import {PersonsPage} from "./pages/PersonsPage.jsx"
+import {StatePage} from "./pages/StatePage.jsx";
 
 function App() {
     return (
@@ -22,6 +23,7 @@ function App() {
                     <Tab>cars</Tab>
                     <Tab>Persons</Tab>
                     <Tab>events</Tab>
+                    <Tab>state</Tab>
 
                 </TabList>
                 <TabPanel>
@@ -41,6 +43,9 @@ function App() {
                 </TabPanel>
                 <TabPanel>
                     <EventsPage />
+                </TabPanel>
+                <TabPanel>
+                    <StatePage/>
                 </TabPanel>
             </Tabs>
         </>
