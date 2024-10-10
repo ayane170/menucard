@@ -1,35 +1,55 @@
-import { Container, Row, Col } from "react-bootstrap";
-import Card from "react-bootstrap/Card";
+import {Section} from "./Section.jsx";
+import {SectionCard} from "./SectionCard.jsx";
 
-// Composant Car pour afficher chaque voiture
-function Car({ car }) {
+const COLORS_CAR_CSS = [
+    {nameInCar: "blauw", backGroundColorInCss: "blue", colorInCss: "white"},
+    {nameInCar: "geel", backGroundColorInCss: "yellow"},
+    {nameInCar: "zwart", backGroundColorInCss: "black", colorInCss: "white"},
+    {nameInCar: "wit", backGroundColorInCss: "white"},
+    {nameInCar: "rood", backGroundColorInCss: "red", colorInCss: "white"},
+    {nameInCar: "grijs", backGroundColorInCss: "grey", colorInCss: "white"},
+    {nameInCar: "groen", backGroundColorInCss: "green", colorInCss: "white"},
+];
+
+//merk op: dit is een gewone functie, geen React-Component
+function styleColor(color) {
+    const colorCarCss = COLORS_CAR_CSS.find(c => c.nameInCar === color);
+    if (!colorCarCss) return;
+    return {
+        backgroundColor: colorCarCss.backGroundColorInCss,
+        color: colorCarCss.colorInCss,
+        margin: "0.5em"
+    };
+}
+
+function CarColor(props) {
+    const {color} = props;
+
+    if (!color) return null;
+    return <div style={styleColor(color)}>
+        kleur: {color} &nbsp;
+    </div>;
+}
+
+function Car(props) {
+    const {car} = props;
     return (
-        <Card className="m-2 p-2 shadow-sm">
-            <Card.Body>
-                <p><strong>Naam:</strong> {car.name}</p>    {/* Afficher la propriété 'name' */}
-                <p><strong>Merk:</strong> {car.brand}</p>   {/* Afficher la propriété 'brand' */}
-                <p><strong>Type:</strong> {car.type}</p>    {/* Afficher la propriété 'type' */}
-                <p><strong>Kleur:</strong> {car.color}</p>  {/* Afficher la propriété 'color' */}
-            </Card.Body>
-        </Card>
+        <SectionCard key={car.id}>
+            <h5>{car.name}</h5>
+            {car.brand && <div>merk: {car.brand}</div>}
+            {car.type && <div>type: {car.type}</div>}
+            {car.note && <div>opm: {car.note}</div>}
+            <CarColor color={car.color}/>
+        </SectionCard>
     );
 }
 
-// Composant Cars pour afficher la liste des voitures
 export function Cars(props) {
-    const {cars, title} = props;
+    const {cars, title} = props
     return (
-        <div className="mt-3 rounded shadow-sm" style={{ background: "lavender" }}>
-            <h2 className="text-center">{title}</h2>
-            <Container>
-                <Row>
-                    {cars.map((car) => (
-                        <Col xs={12} sm={6} md={4} lg={3} key={car.id} className="text-center">
-                            <Car car={car} /> {/* Utilisation de Car pour afficher chaque voiture */}
-                        </Col>
-                    ))}
-                </Row>
-            </Container>
-        </div>
+        <Section title={title}>
+            {cars.map(c => <Car car={c} key={c.id}/>)}
+        </Section>
     );
 }
+
