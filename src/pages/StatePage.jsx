@@ -14,9 +14,23 @@ export function StatePage(){
                     size="sm"
                     width="20px"
                     className="m-2 mt-1"
-                    onClick={() => setDemoValue(77)}>
-                set 77
+                    onClick={() => setDemoValue(0)}>
+                set 0
             </Button>
+                <Button variant="primary"
+                        size="sm"
+                        width="20px"
+                        className="m-2 mt-1"
+                        onClick={() => setDemoValue(77)}>
+                    set 77
+                </Button>
+                <Button variant="primary"
+                        size="sm"
+                        width="20px"
+                        className="m-2 mt-1"
+                        onClick={() => setDemoValue(184)}>
+                    set 184
+                </Button>
             </div>
         </Section>
 )
