@@ -23,6 +23,19 @@ return(
 );
 }
 
+function OnOffDemo(){
+    const [isOn,setIsOn]=useState(false);
+    return(
+        <div className="m-2 mt-1" style={cadreStyle.div}>
+            huidige waarde van isOn is: {isOn ? "on" :"off"}
+            <MyButton onClick={() => setIsOn(false)}>off</MyButton>
+            <MyButton onClick={() => setIsOn(true)}>on</MyButton>
+        </div>
+
+    );
+
+}
+
 
 export function StatePage() {
     const [demoValue, setDemoValue] = useState(0);
@@ -40,6 +53,9 @@ export function StatePage() {
             <Section title="my counter">
                 <Counter />
                 <Counter/>
+            </Section>
+            <Section title="on off demo">
+                <OnOffDemo/>
             </Section>
             </>
     )
