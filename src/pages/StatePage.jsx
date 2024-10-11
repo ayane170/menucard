@@ -36,20 +36,29 @@ function OnOffDemo(){
     );
 
 }
-
-
-export function StatePage() {
+function DemoValue(){
     const [demoValue, setDemoValue] = useState(0);
     return (
         <>
-            <Section title="state">
-                <div>de waarde van demoValue is {demoValue}</div>
-                <div>de waarde van demoValue is {demoValue}</div>
-                <div>
-                    <MyButton onClick={() => setDemoValue(0)}>set 0</MyButton>
-                    <MyButton onClick={() => setDemoValue(77)}>set 77</MyButton>
+
+            <div>de waarde van demoValue is {demoValue}</div>
+            <div>de waarde van demoValue is {demoValue}</div>
+            <div>
+                <MyButton onClick={() => setDemoValue(0)}>set 0</MyButton>
+                <MyButton onClick={() => setDemoValue(77)}>set 77</MyButton>
                 <MyButton onClick={() => setDemoValue(184)}>set 184</MyButton>
             </div>
+
+        </>
+    )
+}
+
+
+export function StatePage() {
+    return (
+        <>
+            <Section title="state">
+                <DemoValue/>
         </Section>
             <Section title="my counter">
                 <Counter />
