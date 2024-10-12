@@ -8,7 +8,6 @@ const cadreStyle ={
         border:" 1px solid",
     }
 }
-
 function Counter(){
     const [counter,setCounter]=useState(0);
 return(
@@ -22,7 +21,6 @@ return(
         </div>
 );
 }
-
 function OnOffDemo(){
     const [isOn,setIsOn]=useState(false);
     return(
@@ -32,33 +30,35 @@ function OnOffDemo(){
             <MyButton onClick={() => setIsOn(true)}>on</MyButton>
             <MyButton onClick={() => setIsOn(!isOn)}>toggle</MyButton>
         </div>
-
     );
-
 }
-function DemoValue(){
-    const [demoValue, setDemoValue] = useState(0);
+function DemoValue({value,onValueChange}){
     return (
         <>
-
-            <div>de waarde van demoValue is {demoValue}</div>
-            <div>de waarde van demoValue is {demoValue}</div>
+            <div>de waarde van demoValue is {value}</div>
+            <div>de waarde van demoValue is {value}</div>
             <div>
-                <MyButton onClick={() => setDemoValue(0)}>set 0</MyButton>
-                <MyButton onClick={() => setDemoValue(77)}>set 77</MyButton>
-                <MyButton onClick={() => setDemoValue(184)}>set 184</MyButton>
+                <MyButton onClick={() => onValueChange(0)}>set 0</MyButton>
+                <MyButton onClick={() => onValueChange(77)}>set 77</MyButton>
+                <MyButton onClick={() => onValueChange(184)}>set 184</MyButton>
             </div>
 
         </>
     )
 }
-
-
+function  DemoValueReadonly({value}){
+    return(
+        <>
+            <div>de waarde van demoValue is {value}</div>
+        </>
+    );
+}
 export function StatePage() {
+    const [demoValue, setDemoValue] = useState(0);
     return (
         <>
             <Section title="state">
-                <DemoValue/>
+                <DemoValue value={demoValue} onValueChange={setDemoValue} />
         </Section>
             <Section title="my counter">
                 <Counter />
@@ -66,6 +66,9 @@ export function StatePage() {
             </Section>
             <Section title="on off demo">
                 <OnOffDemo/>
+            </Section>
+            <Section>
+                <DemoValueReadonly value={demoValue}/>
             </Section>
             </>
     )
