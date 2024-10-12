@@ -8,15 +8,14 @@ const cadreStyle ={
         border:" 1px solid",
     }
 }
-function Counter(){
-    const [counter,setCounter]=useState(0);
+function Counter({value,onValueChange}){
 return(
         <div className="m-2 mt-1" style={cadreStyle.div}>
             <div>
-                De waarde van de counter is:{counter}
-                <MyButton onClick={() => setCounter(counter + 1)}>+</MyButton>
-                <MyButton onClick={() => setCounter(0)}>clear</MyButton>
-                <MyButton onClick={() => setCounter(counter - 1)}>-</MyButton>
+                De waarde van de counter is:{value}
+                <MyButton onClick={() => onValueChange(value + 1)}>+</MyButton>
+                <MyButton onClick={() => onValueChange(0)}>clear</MyButton>
+                <MyButton onClick={() => onValueChange(value - 1)}>-</MyButton>
             </div>
         </div>
 );
@@ -53,22 +52,38 @@ function  DemoValueReadonly({value}){
         </>
     );
 }
+
+    function  DemoValueIncrement({value,onValueChange}){
+return(
+
+        <MyButton onClick={() => onValueChange(value + 1)}>demoValue+</MyButton>
+
+);
+}
 export function StatePage() {
     const [demoValue, setDemoValue] = useState(0);
+    const [counter,setCounter]=useState(0);
+
     return (
         <>
             <Section title="state">
                 <DemoValue value={demoValue} onValueChange={setDemoValue} />
         </Section>
             <Section title="my counter">
-                <Counter />
-                <Counter/>
+                <Counter  value={counter} onValueChange={setCounter}/>
+                <Counter value={counter} onValueChange={setCounter} />
             </Section>
             <Section title="on off demo">
                 <OnOffDemo/>
             </Section>
             <Section>
                 <DemoValueReadonly value={demoValue}/>
+
+            </Section>
+            <Section>
+                <div>
+                    <DemoValueIncrement  value={counter} onValueChange={setCounter}/>
+                </div>
             </Section>
             </>
     )
