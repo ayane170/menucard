@@ -11,6 +11,7 @@ import {CarsPage} from "./pages/CarsPage.jsx";
 import {EventsPage} from "./pages/EventsPage.jsx";
 import {PersonsPage} from "./pages/PersonsPage.jsx"
 import {StatePage} from "./pages/StatePage.jsx";
+import {FavoriteNumberPage} from "./pages/FavoriteNumberPage.jsx";
 
 function App() {
     return (
@@ -24,6 +25,7 @@ function App() {
                     <Tab>Persons</Tab>
                     <Tab>events</Tab>
                     <Tab>state</Tab>
+                    <Tab>Fav Numbers</Tab>
 
                 </TabList>
                 <TabPanel>
@@ -46,6 +48,9 @@ function App() {
                 </TabPanel>
                 <TabPanel>
                     <StatePage/>
+                </TabPanel>
+                <TabPanel>
+                    <FavoriteNumberPage  numbers={NUMBER_DATA}/>
                 </TabPanel>
             </Tabs>
         </>

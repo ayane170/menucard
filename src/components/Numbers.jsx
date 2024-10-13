@@ -3,16 +3,18 @@ import {SectionCard} from "./SectionCard.jsx";
 
 
 export function Numbers(props) {
-    const {numbers, title} = props;
-
+    const {numbers, title,favorite,onSelectNumber} = props;
     return (
         <Section title={title}>
-
-            {numbers.map((n, i) =>
-                <SectionCard key={i}>{n}</SectionCard>)
-            }
+            {numbers.map((num, i) => (
+                <SectionCard
+                    key={i}
+                    onClick={() => onSelectNumber(num)}
+                    style={{ color: num === favorite ? 'orange' : 'black' }}
+                >
+                    {num}
+                </SectionCard>
+            ))}
         </Section>
     );
 }
-
-
