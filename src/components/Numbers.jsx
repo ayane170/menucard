@@ -7,7 +7,7 @@ export function Numbers(props) {
     return (
         <Section title={title} isInitiallyOpen={isInitiallyOpen}>
             {numbers.map((num, i) => (
-                <SectionCard key={i} onSelect={() => onSelectNumber(num)}>{num}</SectionCard>)
+                <SectionCard key={i} onSelect={onSelectNumber && (() => onSelectNumber(num))}>{num}</SectionCard>)
             )}
         </Section>
     );
