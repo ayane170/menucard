@@ -3,18 +3,12 @@ import {SectionCard} from "./SectionCard.jsx";
 
 
 export function Numbers(props) {
-    const {numbers, title,favorite,onSelectNumber,isInitiallyOpen} = props;
+    const {numbers, title,onSelectNumber,isInitiallyOpen} = props;
     return (
         <Section title={title} isInitiallyOpen={isInitiallyOpen}>
             {numbers.map((num, i) => (
-                <SectionCard
-                    key={i}
-                    onClick={() => onSelectNumber(num)}
-                    style={{ color: num === favorite ? 'orange' : 'black' }}
-                >
-                    {num}
-                </SectionCard>
-            ))}
+                <SectionCard key={i} onSelect={() => onSelectNumber(num)}>{num}</SectionCard>)
+            )}
         </Section>
     );
 }
