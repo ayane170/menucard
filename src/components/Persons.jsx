@@ -15,10 +15,10 @@ function Person(props){
 
 
 export function Persons(props){
-    const {persons,title} = props;
+    const {persons,title,isInitiallyOpen} = props;
     return(
 
-        <Section title={title}>
+        <Section title={title} isInitiallyOpen={isInitiallyOpen}>
             {persons.map(p => <Person key={p.id} person={p}  />)}
         </Section>
 

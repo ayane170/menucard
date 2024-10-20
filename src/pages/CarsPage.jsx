@@ -6,7 +6,7 @@ export function  CarsPage(props){
     return(
         <div className="mx-3" >
 
-                <Cars cars={cars} title={"Auto's"} />
+                <Cars cars={cars} title={"Auto's"} isInitiallyOpen={true}/>
         </div>
 
 

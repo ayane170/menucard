@@ -19,17 +19,13 @@ import {Button, Container, Row} from "react-bootstrap";
 import {useState} from "react";
 
 export function Section(props) {
-    const {title, children} = props;
-    const [isOpen,setIsOpen]=useState(false); // il a une relation avec la function de la ligne 25
+    const {title, children,isInitiallyOpen} = props;
+    const [isOpen,setIsOpen]=useState(isInitiallyOpen);
 
     const toggleSection = () => {
         setIsOpen(!isOpen);
         console.log(`Section ${title} is clicked`)
     }
-
-    // const handleClick = () => {
-    //     console.log(`Section ${title} is clicked`)
-    // }
 
     return (
         <div className="mt-3 rounded shadow-sm" style={{backgroundColor: "lavender"}}>

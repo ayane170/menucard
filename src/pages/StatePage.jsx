@@ -66,7 +66,7 @@ export function StatePage() {
 
     return (
         <>
-            <Section title="state">
+            <Section title="state" isInitiallyOpen={true}>
                 <DemoValue value={demoValue} onValueChange={setDemoValue} />
         </Section>
             <Section title="my counter">

@@ -11,9 +11,9 @@ function City(props){
 }
 
 export function Cities(props){
-    const {cities,title}= props;
+    const {cities,title,isInitiallyOpen}= props;
     return(
-        <Section title={title}>
+        <Section title={title} isInitiallyOpen={isInitiallyOpen}>
             {cities.map((c,index) => <City city={c} key={c.name + index}/>)}
         </Section>
 

@@ -10,7 +10,7 @@ export function NumbersPage(props){
     return(
          <Card style={{ padding: '20px', margin: '20px', border: '1px solid #ddd' }}>
             <Card.Body>
-                <Numbers numbers={numbers} title={"Alle getallen"}/>
+                <Numbers numbers={numbers} title={"Alle getallen"} isInitiallyOpen={true}/>
                 <Numbers numbers={filteredNumbers} title={"getallen > 6"} />
                 <Numbers numbers={doubleNumbers} title ={ "getallen * 2"}/>
             </Card.Body>
