@@ -1,28 +1,46 @@
-export function MenuProduct(props) {
-    const {product, isFavorite} = props;
-    if (!product?.name || product.price === undefined) return;// de cet methode si le produit n'a pas de prix il ne va pas apparaitre
+import {Col, Row} from "react-bootstrap";
 
-    const productStyle = {
-        background: isFavorite ? "Aqua" : "",
-    };
+function ProductSize(props) {
+    const {product} = props;
+    if (!product.size) return;
+
     return (
-        <div style={{margin: "2vw", fontSize: "larger", display: "flex"}}>
-            <div style={{flex: 1,}}>
-             <span style={productStyle}>
-                    {product.name}
-                 <div style={{color: "blue", display: "inline"}}>
-                    {product.size ? ` (${product.size} cl)` : ''}
-                </div>
-                 </span>
-                <div style={{color: "blue", fontSize: 14}}>
-                    {product.note}
-                </div>
-            </div>
-            <div style={{flex: 1}}>
-                <span style={productStyle}>
-                {product.price} &euro;
-                </span>
-            </div>
-        </div>
+        <span className="fs-6 text-primary">
+            &nbsp;({product.size}cl)
+        </span>
     );
 }
+
+function ProductNote(props) {
+    const {product} = props;
+    if (!product.note) return;
+
+    return (
+        <Row className="fs-6 text-primary">
+            <Col>
+                {product.note}
+            </Col>
+        </Row>
+    );
+}
+export function MenuProduct(props) {
+    const {product, isFavorite, onSelect} = props;
+    if (!product?.name || !product?.price) return;
+
+    return (
+        <>
+                <Row className={`fs-3 ${isFavorite ? 'bg-info-subtle' : ''}`}
+                     style={{cursor: "pointer"}}
+                     onClick={() => onSelect(product)}>
+                    <Col>
+                        {product.name}
+                        <ProductSize product={product}/>
+                    </Col>
+                    <Col>
+                        {product.price} &euro;
+                    </Col>
+                </Row>
+                <ProductNote product={product}/>
+            </>
+            );
+            }
