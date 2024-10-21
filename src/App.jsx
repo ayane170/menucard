@@ -13,6 +13,7 @@ import {PersonsPage} from "./pages/PersonsPage.jsx"
 import {StatePage} from "./pages/StatePage.jsx";
 import {FavoriteNumberPage} from "./pages/FavoriteNumberPage.jsx";
 import {InputPage} from "./pages/InputPage.jsx";
+import {SearchPersonsPage} from "./pages/SearchPersonsPage.jsx";
 
 function App() {
     return (
@@ -28,6 +29,7 @@ function App() {
                     <Tab>state</Tab>
                     <Tab>Fav Numbers</Tab>
                     <Tab>input</Tab>
+                    <Tab>Search</Tab>
 
                 </TabList>
                 <TabPanel>
@@ -56,6 +58,9 @@ function App() {
                 </TabPanel>
                 <TabPanel>
                     <InputPage/>
+                </TabPanel>
+                <TabPanel>
+                    <SearchPersonsPage persons={PERSON_DATA}/>
                 </TabPanel>
             </Tabs>
         </>
