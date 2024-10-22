@@ -1,6 +1,7 @@
 import {firestoreDB} from "../services/firebase.js";
 import {useCollectionData} from "react-firebase-hooks/firestore";
 import{collection} from 'firebase/firestore'
+import {Persons} from "../components/Persons.jsx";
 
 const personConverter = {
     toFirestore: undefined, //we will do this later
@@ -16,7 +17,9 @@ export function PersonsFromDbPage(){
     console.log({values,loading,error});
     return(
         <>
-            <div>Persons from db</div>
+            <div className="mx-3">
+                <Persons title="Persons from database" persons={values} isInitiallyOpen={true}/>
+            </div>
         </>
     );
 }

@@ -19,7 +19,7 @@ export function Persons(props){
     return(
 
         <Section title={title} isInitiallyOpen={isInitiallyOpen}>
-            {persons.map(p => <Person key={p.id} person={p}  />)}
+            {persons?.map(p => <Person key={p.id} person={p}  />)}
         </Section>
 
     );
