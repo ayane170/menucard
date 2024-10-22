@@ -24,3 +24,7 @@ dist-ssr
 *.sw?
 
 *storybook.log
+
+# Ignore env files
+.env
+.env.*.local
