@@ -15,7 +15,8 @@ import {FavoriteNumberPage} from "./pages/FavoriteNumberPage.jsx";
 import {InputPage} from "./pages/InputPage.jsx";
 import {SearchPersonsPage} from "./pages/SearchPersonsPage.jsx";
 import {MultipleFavoriteNumbersPage} from "./pages/MultipleFavoriteNumbersPage.jsx";
-import "./services/firebase.js";
+import "./services/firebase.js"
+import {PersonsFromDbPage} from "./pages/PersonsFromDbPage.jsx";
 
 function App() {
     return (
@@ -33,6 +34,7 @@ function App() {
                     <Tab>input</Tab>
                     <Tab>Search</Tab>
                     <Tab>multiple fav numbers</Tab>
+                    <Tab>Persons-Db</Tab>
 
                 </TabList>
                 <TabPanel>
@@ -67,6 +69,9 @@ function App() {
                 </TabPanel>
                 <TabPanel>
                     <MultipleFavoriteNumbersPage numbers={NUMBER_DATA}/>
+                </TabPanel>
+                <TabPanel>
+                    <PersonsFromDbPage/>
                 </TabPanel>
             </Tabs>
         </>
