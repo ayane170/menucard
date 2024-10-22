@@ -15,6 +15,7 @@ import {FavoriteNumberPage} from "./pages/FavoriteNumberPage.jsx";
 import {InputPage} from "./pages/InputPage.jsx";
 import {SearchPersonsPage} from "./pages/SearchPersonsPage.jsx";
 import {MultipleFavoriteNumbersPage} from "./pages/MultipleFavoriteNumbersPage.jsx";
+import "./services/firebase.js";
 
 function App() {
     return (
